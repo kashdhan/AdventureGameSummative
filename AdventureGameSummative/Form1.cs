@@ -421,58 +421,61 @@ namespace AdventureGameSummative
                     break;
                 case 20:
                     outputLabel.Text = "Uh, oh. You walked right into an invisible centaur trap. Some witches and wizards " +
-                        "come to see what they've caught. When  ";
-                    redLabel.Text = "";
-                    blueLabel.Text = "";
+                        "come to see what they've caught. When they realize they've caught YOU they debate bribing you or " +
+                        "giving you a forgetfulness charm.\n\n What should you suggest for them to do?  ";
+                    redLabel.Text = "I should tell them to bribe me.";
+                    blueLabel.Text = "I should tell them to use a forgetfullness charm on me!";
                     yellowLabel.Text = "";
                     break;
                 case 21:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
-                    redLabel.Text = "Yes";
-                    blueLabel.Text = "No";
+                    outputLabel.Text = "Though this charm is one use. You are hydrated and ready to go! On your final stretch of your " +
+                        "journey you must sneak past the Fire-breathing Guardian Dragon. You can see the amethyst, it is so close. " +
+                        "You could use your cloak of invisibility to sneak past the dragon, or apparate to the other side.\n\nShould you " +
+                        "use your cloak or should you apparate?";
+                    redLabel.Text = "I'm gonna use my invisibility cloak!";
+                    blueLabel.Text = "I'm gonna apparate!";
                     yellowLabel.Text = "";
                     break;
                 case 22:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
+                    outputLabel.Text = "Oh no, you've disturbed the Merpeople. Because you didn't bring anything to help you " +
+                        "breathe underwater, you get sucked under. You make a fantastic mermaid meal!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 23:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
+                    outputLabel.Text = "The witches and wizards give in. You've made an oath to not tell anyone about this trap, " +
+                        "in return they gift you a RED AMYTHST! CONGRAGULATIONS! You have successfully completed your quest. " +
+                        "Your house gains 85 points!!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 24:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
+                    outputLabel.Text = "The witches and wizards agree. They cast a forgetfulness charm on you and apparate you back" +
+                        " to Hogwarts. You failed your quest. No house points for you.\n\n Play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 25:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
+                    outputLabel.Text = "Woohoo!!! You are sneakkkyy! You've got the magical red amethyst! I knew you could do it! Your house " +
+                        "gains 100 points! Apparate back home! Play Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 26:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
+                    outputLabel.Text = "Oh no! You've awaken the Guardian Dragon. She could sense your apparition magic right away. " +
+                        "It took her seconds to find you. You were burnt to a crisp.\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 27:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
-                        "You just gave them a tasty meal!\n\nPlay Again?";
-                    redLabel.Text = "Yes";
-                    blueLabel.Text = "No";
+                    outputLabel.Text = "Thanks for playing!";
+                    redLabel.Text = "";
+                    blueLabel.Text = "";
                     yellowLabel.Text = "";
                     break;
                 default:
