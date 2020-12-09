@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
-
+//Kashish Dhanoa
+//
 namespace AdventureGameSummative
 {
     public partial class Form1 : Form
@@ -19,7 +20,13 @@ namespace AdventureGameSummative
         public Form1()
         {
             InitializeComponent();
-            
+            //starting text
+            outputLabel.Text = "Welcome to the Wizarding World. I've got a *secret* quest for you! That is, " +
+                        "if you're from Gryffindor house.\n\nAre you from Gryffindor House??";
+            redLabel.Text = "I am!";
+            blueLabel.Text = "I am not sure...";
+            yellowLabel.Text = "I am not.";
+            sceneImageBox.BackgroundImage = Properties.Resources.gryf;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -256,7 +263,6 @@ namespace AdventureGameSummative
                 {
                     scene = 27;
                 }
-     
             }
             else if (e.KeyCode == Keys.N)  //yellow button press
             {
@@ -266,24 +272,26 @@ namespace AdventureGameSummative
                 }
             }
             switch (scene)
-            {
-                case 0:
+            {//Display text and game options to screen based on the current scene 
+                case 0://start scene
                     outputLabel.Text = "Welcome to the Wizarding World. I've got a *secret* quest for you! That is, " +
                         "if you're from Gryffindor house.\n\nAre you from Gryffindor House??";
                     redLabel.Text = "I am!";
                     blueLabel.Text = "I am not sure...";
                     yellowLabel.Text = "I am not.";
+                    sceneImageBox.BackgroundImage = Properties.Resources.gryf;
                     break;
                 case 1:
-                    outputLabel.Text = "It is likely that you may not return home after this quest, nor can your safety be guaranteed.  " +
+                    outputLabel.Text = "It is likely that you may not return home after this quest, nor can your safety be guaranteed." +
                         "Upon quest completion, you will gain house points!\n\nWould you like to begin your quest?";
                     redLabel.Text = "Yes!";
                     blueLabel.Text = "No.";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.castle;
                     break;
                 case 2:
-                    outputLabel.Text = "Unfortunately I have no available quests for you. Come again next week and see what I have in " +
-                        "store!\n\n Play again?";
+                    outputLabel.Text = "This is the GRYFFINDOR Quest Request, so, unfortunately, I have no available quests for you. " +
+                        "Come back in the upcoming weeks to see what I have in store!\n\n Play again?";
 
                     redLabel.Text = "Yes!";
                     blueLabel.Text = "No.";
@@ -295,6 +303,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.coa;
                     break;
                 case 4:
                     outputLabel.Text = "You walk into a room and find a jerk being rude to your best friend (even though your best " +
@@ -303,6 +312,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No, I go after the JERK!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.coa;
                     break;
                 case 5:
                     outputLabel.Text = "You walk into a room and find a jerk being rude to your best friend (even though your best " +
@@ -311,13 +321,15 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No, I go after my friend!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.coa;
                     break;
                 case 6:
                     outputLabel.Text = "Unfortunately you are a Hufflepuff! You cannot complete this quest at this time. " +
-                        "Come back soon!\n\nPlay Again?";
+                        "Come back in 3 weeks for my Hufflepuff quests!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.huffle;
                     break;
                 case 7:
                     outputLabel.Text = "Congratulations! You are a Gryffindor. You may take on this quest! It is likely " +
@@ -329,25 +341,28 @@ namespace AdventureGameSummative
                     break;
                 case 8:
                     outputLabel.Text = "Unfortunately you are a Slytherin! You cannot complete this quest at this time. " +
-                        "Come back soon!\n\nPlay Again?";
+                        "Come back in next week for my Slytherin quests!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.slyth;
                     break;
                 case 9:
                     outputLabel.Text = "Unfortunately you are a Ravenclaw! You cannot complete this quest at this time. " +
-                        "Come back soon!\n\nPlay Again?";
+                        "Come back in 2 weeks for my Ravenclaw quests!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.raven;
                     break;
                 case 10:
                     outputLabel.Text = "Your quest is to retrieve a magical red amethyst. The closest one is located in the Den of Dragons. " +
                         "You have until dusk in 2 days time. The sooner you leave the better.\n\nWill you leave for your quest tonight or " +
-                        "tommor at dawn?";
+                        "tommorow at dawn?";
                     redLabel.Text = "I will leave tonight!";
                     blueLabel.Text = "I will leave tomorrow at dawn...";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.red;
                     break;
                 case 11:
                     outputLabel.Text = "Alright. Come back soon to see if I have another quest for you. Goodbye! \n\n Play Again?";
@@ -358,32 +373,37 @@ namespace AdventureGameSummative
                 case 12:
                     outputLabel.Text = "Good choice. It's hard to see at night, so you sneaked away quietly! Because of the lack of " +
                         "light, you didn't see that you stepped on a small Acromantula until its family started to surround you " +
-                        "(or at least, that's what you assume). You see a clear opening you could run through to escape the Acromantula." +
-                        "\n\nWill you sprint through the opening or will you use Lumos to help you see in the dark?";
+                        "(or at least, that's what you assume). You see a clear opening you could run through to escape the " +
+                        "Acromantula.\n\nWill you sprint through the opening or will you use Lumos to help you see in the dark?";
                     redLabel.Text = "I'll sprint through the opening!";
                     blueLabel.Text = "I will use Lumos to help me see.";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.acro;
                     break;
                 case 13:
                     outputLabel.Text = "Uh oh. Remember this was a SECRET quest... Prof. McGonagall caught you wandering about. " +
-                        "No more adventuring for today. Come back in a few weeks for another quest!\n\nPlay Again?";
+                        "No more adventuring for you today. Come back in a few weeks for another quest!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.mcgona;
                     break;
                 case 14:
-                    outputLabel.Text = "Wow, you're fast! You've just exited the forbidden forest. You seem tired.\n\nWould you like to " +
-                        "set up camp and rest for a few hours or continue your journey?";
+                    outputLabel.Text = "Wow, you're fast! You've just left the forbidden forest. You seem tired.\n\nWould you like to " +
+                        "set up camp and rest for a few hours or continue your journey by foot?";
                     redLabel.Text = "I'm tired, I should rest!";
                     blueLabel.Text = "I should continue my journey, can't slow down!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.tent;
+
                     break;
                 case 15:
-                    outputLabel.Text = "Bad idea. By the time you get your wand out, the Acromantula have completely surrounded you. " +
+                    outputLabel.Text = "Bad idea!!! By the time you get your wand out, the Acromantula have completely surrounded you. " +
                         "You just gave them a tasty meal!\n\nPlay Again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.acro;
                     break;
                 case 16:
                     outputLabel.Text = "Uh, oh. During your sleep the Acromantula found you and took you back for an early snack!" +
@@ -391,24 +411,27 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.acro;
                     break;
                 case 17:
                     outputLabel.Text = "Great, you must keep going! You've now been walking peacefully for hours. Suddenly you " +
-                        "encounter a fork in the path. One is filled bushes, shrubs and overgrown grass, the other has a muddy " +
+                        "encounter a fork in the path. One path is filled bushes, shrubs and overgrown grass, the other has a muddy " +
                         "trail and branches dead leaves.\n\n Which path do you choose?";
                     redLabel.Text = "The path with overgrown grass, shrubs and bushes!";
                     blueLabel.Text = "The muddy trail with branches and dead leaves!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.fork;
                     break;
                 case 18:
                     outputLabel.Text = "The road less traveled was a good choice. You camp out for the night using a disillusionment " +
                         "charm. You slept peacefully. When you wake up you continue your hike. Before you reach the Den of Dragons " +
-                        "at the top of a mountain, you must cross the Lake of Shining Pebbles. As you use your boat (that you luckily packed), " +
-                        "you realize you've run out of drinking water.\n\nWill you get water from your one-time Agumenti Charm or will you drink " +
-                        "from the Lake? ";
+                        "at the top of a mountain, you must cross the Lake of Shining Pebbles. As you use your boat (that you luckily " +
+                        "packed), you realize you've run out of drinking water.\n\nWill you get water from your one-time Agumenti " +
+                        "Charm or will you drink from the Lake? ";
                     redLabel.Text = "I'll use my Agumenti Charm!";
                     blueLabel.Text = "I'll just drink from the Lake.";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.boat;
                     break;
                 case 19:
                     outputLabel.Text = "You continue down the path and reach a nearby brook. You rest and use your disillusionment " +
@@ -418,6 +441,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "I'll use my Agumenti Charm!";
                     blueLabel.Text = "I'll just drink from the Lake.";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.boat;
                     break;
                 case 20:
                     outputLabel.Text = "Uh, oh. You walked right into an invisible centaur trap. Some witches and wizards " +
@@ -426,6 +450,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "I should tell them to bribe me.";
                     blueLabel.Text = "I should tell them to use a forgetfullness charm on me!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.wizard;
                     break;
                 case 21:
                     outputLabel.Text = "Though this charm is one use. You are hydrated and ready to go! On your final stretch of your " +
@@ -435,6 +460,8 @@ namespace AdventureGameSummative
                     redLabel.Text = "I'm gonna use my invisibility cloak!";
                     blueLabel.Text = "I'm gonna apparate!";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.mount;
+
                     break;
                 case 22:
                     outputLabel.Text = "Oh no, you've disturbed the Merpeople. Because you didn't bring anything to help you " +
@@ -442,6 +469,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.mer;
                     break;
                 case 23:
                     outputLabel.Text = "The witches and wizards give in. You've made an oath to not tell anyone about this trap, " +
@@ -450,6 +478,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.red;
                     break;
                 case 24:
                     outputLabel.Text = "The witches and wizards agree. They cast a forgetfulness charm on you and apparate you back" +
@@ -457,6 +486,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.castle;
                     break;
                 case 25:
                     outputLabel.Text = "Woohoo!!! You are sneakkkyy! You've got the magical red amethyst! I knew you could do it! Your house " +
@@ -464,6 +494,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.red;
                     break;
                 case 26:
                     outputLabel.Text = "Oh no! You've awaken the Guardian Dragon. She could sense your apparition magic right away. " +
@@ -471,6 +502,7 @@ namespace AdventureGameSummative
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
+                    sceneImageBox.BackgroundImage = Properties.Resources.dragonangry;
                     break;
                 case 27:
                     outputLabel.Text = "Thanks for playing!";

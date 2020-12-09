@@ -92,5 +92,56 @@
   <ItemGroup>
     <None Include="Resources\yellow_50x50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogwarts-7938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogwarts_7038.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogwarts-7917.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-disney-castle-png-223345.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-crest-png-439176.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiclipart.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klipartz.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_professor-minerva-mcgonagall-harry-potter-and-the-philosophers-stone-professor-severus-snape-harry-potter-and-the-prisoner-of-azkaban-albus-dumbledore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\151-1519061_tent-transparent-tree-tent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-spectre-png-3517409.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizardspic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-dragon-png-harry-potter-dragon-1024x949.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain-cave-by-glaiceana-mountain-cave-png-1095_730.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1234.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
