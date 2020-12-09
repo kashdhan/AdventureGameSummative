@@ -49,7 +49,8 @@
             this.outputLabel.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.outputLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.outputLabel.Location = new System.Drawing.Point(10, 9);
+            this.outputLabel.Location = new System.Drawing.Point(9, 12);
+            this.outputLabel.Margin = new System.Windows.Forms.Padding(3);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(555, 232);
             this.outputLabel.TabIndex = 0;
@@ -86,10 +87,10 @@
             // 
             // sceneImageBox
             // 
-            this.sceneImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.sceneImageBox.Location = new System.Drawing.Point(1, 244);
+            this.sceneImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sceneImageBox.Location = new System.Drawing.Point(1, 229);
             this.sceneImageBox.Name = "sceneImageBox";
-            this.sceneImageBox.Size = new System.Drawing.Size(573, 208);
+            this.sceneImageBox.Size = new System.Drawing.Size(573, 223);
             this.sceneImageBox.TabIndex = 7;
             this.sceneImageBox.TabStop = false;
             // 
